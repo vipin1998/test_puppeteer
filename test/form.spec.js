@@ -103,4 +103,13 @@ beforeAll(async () => {
     
     await page.waitForSelector(".alert");
     }, 1600000);
+
+    describe("Testing the frontend", () => {
+      test("assert that title is correct", async () => {
+        const title = await page.title();
+        expect(title).toBe(
+          "SimplyCredit, Inc."
+        );
+      });
+    });
   });
